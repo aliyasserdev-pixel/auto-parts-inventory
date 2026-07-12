@@ -1,0 +1,234 @@
+/* تحسينات للتجاوب */
+
+/* شاشات متوسطة */
+@media (max-width: 992px) {
+    .dashboard-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* شاشات صغيرة */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(100%);
+        width: 280px;
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    
+    .main-content {
+        margin-right: 0;
+    }
+    
+    .main-header {
+        padding: 12px 16px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .header-search {
+        order: 3;
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+    
+    .header-actions {
+        gap: 8px;
+    }
+    
+    .header-actions button {
+        font-size: 1.1rem;
+        padding: 6px;
+    }
+    
+    #currentDate {
+        font-size: 0.8rem;
+    }
+    
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .stat-card {
+        padding: 16px;
+    }
+    
+    .stat-card .stat-value {
+        font-size: 1.4rem;
+    }
+    
+    .stat-card .stat-icon {
+        font-size: 1.5rem;
+    }
+    
+    .page-content {
+        padding: 16px;
+    }
+    
+    .filters-container {
+        flex-direction: column;
+    }
+    
+    .filters-container select,
+    .filters-container input {
+        width: 100%;
+    }
+    
+    .card {
+        padding: 16px;
+    }
+    
+    .modal {
+        padding: 16px;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+    
+    .toast {
+        min-width: 200px;
+        font-size: 0.9rem;
+        padding: 12px 16px;
+    }
+    
+    .toast-container {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+    }
+    
+    table {
+        font-size: 0.85rem;
+    }
+    
+    th, td {
+        padding: 8px 12px;
+    }
+    
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .btn-sm {
+        padding: 3px 8px;
+        font-size: 0.75rem;
+    }
+    
+    .form-group {
+        margin-bottom: 12px;
+    }
+    
+    .form-control {
+        padding: 8px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* شاشات صغيرة جداً */
+@media (max-width: 480px) {
+    .dashboard-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+    
+    .stat-card {
+        padding: 12px;
+    }
+    
+    .stat-card .stat-value {
+        font-size: 1.2rem;
+    }
+    
+    .stat-card .stat-label {
+        font-size: 0.75rem;
+    }
+    
+    .stat-card .stat-icon {
+        font-size: 1.2rem;
+        margin-bottom: 4px;
+    }
+    
+    .page-header {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+    }
+    
+    .page-header h1 {
+        font-size: 1.2rem;
+    }
+    
+    .header-search input {
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+    
+    .header-search button {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .modal {
+        padding: 12px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.1rem;
+    }
+    
+    table {
+        font-size: 0.75rem;
+    }
+    
+    th, td {
+        padding: 6px 8px;
+    }
+    
+    .btn {
+        padding: 5px 10px;
+        font-size: 0.75rem;
+    }
+    
+    .btn-sm {
+        padding: 2px 6px;
+        font-size: 0.7rem;
+    }
+    
+    .card-title {
+        font-size: 0.95rem;
+    }
+}
+
+/* طباعة */
+@media print {
+    .sidebar,
+    .main-header,
+    .btn,
+    .no-print {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-right: 0 !important;
+    }
+    
+    .page-content {
+        padding: 0 !important;
+    }
+    
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd;
+    }
+    
+    table {
+        font-size: 0.8rem;
+    }
+}

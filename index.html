@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظام إدارة قطع غيار السيارات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="logo-container">
+            <h2>🚗 قطع غيار</h2>
+            <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="active" data-page="dashboard">
+                <span>📊</span> لوحة التحكم
+            </a>
+            <a href="#" data-page="inventory">
+                <span>📦</span> المخزون
+            </a>
+            <a href="#" data-page="sales">
+                <span>💰</span> المبيعات
+            </a>
+            <a href="#" data-page="reports">
+                <span>📈</span> التقارير
+            </a>
+            <a href="#" data-page="analytics">
+                <span>📊</span> التحليلات
+            </a>
+            <a href="#" data-page="settings">
+                <span>⚙️</span> الإعدادات
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <button onclick="toggleDarkMode()">🌙</button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="main-header">
+            <div class="header-search">
+                <input type="text" id="globalSearch" placeholder="بحث سريع...">
+                <button onclick="performSearch()">🔍</button>
+            </div>
+            <div class="header-actions">
+                <span id="currentDate"></span>
+                <button onclick="showNotifications()">🔔</button>
+                <button onclick="toggleSidebar()">☰</button>
+            </div>
+        </header>
+
+        <!-- Dynamic Content -->
+        <section id="pageContent" class="page-content">
+            <!-- سيتم تحميل المحتوى ديناميكياً -->
+        </section>
+    </main>
+
+    <!-- Toast Container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Modal Container -->
+    <div id="modalContainer" class="modal-container"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

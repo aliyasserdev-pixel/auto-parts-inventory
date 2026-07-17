@@ -8,7 +8,15 @@ class InventoryManager {
     constructor() {
         this.storage = new Storage();
         this.products = this.storage.get('products', []);
-        this.categories = ['Toyota', 'Hyundai', 'Mitsubishi', 'Nissan'];
+        this.categories = [
+          "Toyota",
+          "Hyundai",
+          "Mitsubishi",
+          "Nissan",
+          "ماليزي",
+          "كوري",
+          "إندونيسي",
+        ];
         this.listeners = [];
     }
 

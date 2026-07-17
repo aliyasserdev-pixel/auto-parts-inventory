@@ -1,0 +1,44 @@
+body.dark-mode {
+    --bg-color: #0f172a;
+    --card-bg: #1e293b;
+    --text-color: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border-color: #334155;
+    --shadow: 0 1px 3px rgba(0,0,0,0.3);
+    --shadow-lg: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .sidebar {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .main-header {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .header-search input {
+    background: #0f172a;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+
+body.dark-mode .stat-card,
+body.dark-mode .card {
+    background: #1e293b;
+}
+
+body.dark-mode table th {
+    background: #0f172a;
+}
+
+body.dark-mode .form-control {
+    background: #0f172a;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+
+body.dark-mode .modal {
+    background: #1e293b;
+}

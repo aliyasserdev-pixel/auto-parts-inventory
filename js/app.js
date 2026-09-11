@@ -371,37 +371,37 @@ class App {
 
       this.pageContent.innerHTML = `
         <div style="margin-bottom:20px;">
-          <h1 style="font-size:1.5rem;">📊 لوحة التحكم</h1>
+          <h1 style="font-size:1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-column-icon lucide-chart-no-axes-column"><path d="M5 21v-6"/><path d="M12 21V3"/><path d="M19 21V9"/></svg> لوحة التحكم</h1>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;margin-bottom:30px;">
           <div style="background:var(--card-bg);padding:20px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <div style="font-size:2rem;margin-bottom:10px;">📦</div>
+            <div style="font-size:2rem;margin-bottom:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-boxes-icon lucide-boxes"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></svg></div>
             <div style="font-size:1.8rem;font-weight:bold;">${formatNumber(stats.totalItems)}</div>
             <div style="color:var(--text-secondary);font-size:0.9rem;">إجمالي الأصناف</div>
           </div>
           <div style="background:var(--card-bg);padding:20px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <div style="font-size:2rem;margin-bottom:10px;">📊</div>
+            <div style="font-size:2rem;margin-bottom:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-column-icon lucide-chart-no-axes-column"><path d="M5 21v-6"/><path d="M12 21V3"/><path d="M19 21V9"/></svg></div>
             <div style="font-size:1.8rem;font-weight:bold;">${formatNumber(stats.totalQuantity)}</div>
             <div style="color:var(--text-secondary);font-size:0.9rem;">إجمالي الكميات</div>
           </div>
           <div style="background:var(--card-bg);padding:20px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <div style="font-size:2rem;margin-bottom:10px;">💰</div>
+            <div style="font-size:2rem;margin-bottom:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign-icon lucide-dollar-sign"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
             <div style="font-size:1.8rem;font-weight:bold;">${formatCurrency(stats.totalValue)}</div>
             <div style="color:var(--text-secondary);font-size:0.9rem;">قيمة المخزون</div>
           </div>
           <div style="background:var(--card-bg);padding:20px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <div style="font-size:2rem;margin-bottom:10px;">📈</div>
+            <div style="font-size:2rem;margin-bottom:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined"><path d="M12 16v5"/><path d="M16 14.639V21"/><path d="M20 10.656V21"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18.463V21"/><path d="M8 14.656V21"/></svg></div>
             <div style="font-size:1.8rem;font-weight:bold;color:#16a34a;">${formatCurrency(salesStats.total.revenue)}</div>
             <div style="color:var(--text-secondary);font-size:0.9rem;">إجمالي الإيرادات</div>
           </div>
           <div style="background:var(--card-bg);padding:20px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <div style="font-size:2rem;margin-bottom:10px;">💵</div>
+            <div style="font-size:2rem;margin-bottom:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-dollar-sign-icon lucide-circle-dollar-sign"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 18V6"/></svg></div>
             <div style="font-size:1.8rem;font-weight:bold;color:#2563eb;">${formatCurrency(totalProfit)}</div>
             <div style="color:var(--text-secondary);font-size:0.9rem;">إجمالي الأرباح</div>
           </div>
           <div style="background:var(--card-bg);padding:20px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <div style="font-size:2rem;margin-bottom:10px;">📋</div>
+            <div style="font-size:2rem;margin-bottom:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-file-text-icon lucide-file-text"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></div>
             <div style="font-size:1.8rem;font-weight:bold;">${salesStats.total.count}</div>
             <div style="color:var(--text-secondary);font-size:0.9rem;">عدد الفواتير</div>
           </div>
@@ -410,7 +410,7 @@ class App {
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
           <div class="card" style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-              <h3 style="font-size:1.1rem;">📅 مبيعات اليوم</h3>
+              <h3 style="font-size:1.1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check2-icon lucide-calendar-check-2"><path d="M 19 3 L 5 3"/><path d="M 21 13 L 21 5"/><path d="M 21 5 A2 2 0 0 0 19 3"/><path d="M 3 19 A2 2 0 0 0 5 21"/><path d="M 3 5 L 3 19"/><path d="M 5 3 A2 2 0 0 0 3 5"/><path d="m16 19 2 2 4-4"/><path d="M16 2v3"/><path d="M3 9h18"/><path d="M5 21 L12.5 21"/><path d="M8 2v3"/></svg> مبيعات اليوم</h3>
             </div>
             <p><strong>عدد الفواتير:</strong> ${salesStats.today.count}</p>
             <p><strong>المبيعات:</strong> ${formatNumber(salesStats.today.sales)}</p>
@@ -420,7 +420,7 @@ class App {
 
           <div class="card" style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-              <h3 style="font-size:1.1rem;">🏆 أكثر القطع مبيعاً</h3>
+              <h3 style="font-size:1.1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trophy-icon lucide-trophy"><path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2"/><path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2"/><path d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3"/></svg> أكثر القطع مبيعاً</h3>
             </div>
             ${
               topProducts.length > 0
@@ -440,7 +440,7 @@ class App {
 
           <div class="card" style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-              <h3 style="font-size:1.1rem;">⚠️ تنبيهات المخزون</h3>
+              <h3 style="font-size:1.1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert-icon lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> تنبيهات المخزون</h3>
             </div>
             ${
               lowStock.length > 0
@@ -455,13 +455,13 @@ class App {
             `,
                     )
                     .join("")
-                : '<p style="color:var(--text-secondary);">✅ جميع القطع متوفرة</p>'
+                : '<p style="color:var(--text-secondary);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big-icon lucide-circle-check-big"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> جميع القطع متوفرة</p>'
             }
           </div>
 
           <div class="card" style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-              <h3 style="font-size:1.1rem;">📅 آخر المبيعات</h3>
+              <h3 style="font-size:1.1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check2-icon lucide-calendar-check-2"><path d="M 19 3 L 5 3"/><path d="M 21 13 L 21 5"/><path d="M 21 5 A2 2 0 0 0 19 3"/><path d="M 3 19 A2 2 0 0 0 5 21"/><path d="M 3 5 L 3 19"/><path d="M 5 3 A2 2 0 0 0 3 5"/><path d="m16 19 2 2 4-4"/><path d="M16 2v3"/><path d="M3 9h18"/><path d="M5 21 L12.5 21"/><path d="M8 2v3"/></svg> آخر المبيعات</h3>
             </div>
             ${
               this.sales.sales
@@ -524,15 +524,15 @@ class App {
       this.pageContent.innerHTML = `
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
           <div>
-            <h1 style="font-size:1.5rem;margin-bottom:4px;">📦 إدارة المخزون</h1>
+            <h1 style="font-size:1.5rem;margin-bottom:4px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-boxes-icon lucide-boxes"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></svg> إدارة المخزون</h1>
             <span style="color:var(--text-secondary);font-size:0.9rem;">إجمالي القطع: ${products.length}</span>
           </div>
           <div style="display:flex;gap:10px;flex-wrap:wrap;">
             <button class="btn btn-primary" onclick="app.showAddProduct()" style="padding:10px 20px;background:var(--primary-color);color:white;border:none;border-radius:var(--radius);cursor:pointer;display:flex;align-items:center;gap:6px;">
-              ➕ إضافة قطعة جديدة
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-plus-icon lucide-package-plus"><path d="M12 22V12"/><path d="M16 17h6"/><path d="M19 14v6"/><path d="M21 10.535V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.675-.955"/><path d="M3.29 7 12 12l8.71-5"/><path d="m7.5 4.27 8.997 5.148"/></svg> إضافة قطعة جديدة
             </button>
             <button class="btn btn-info" onclick="app.refreshDataAfterSale()" style="padding:10px 20px;background:#3b82f6;color:white;border:none;border-radius:var(--radius);cursor:pointer;display:flex;align-items:center;gap:6px;">
-              🔄 تحديث
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw-icon lucide-refresh-cw"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg> تحديث
             </button>
           </div>
         </div>
@@ -544,34 +544,34 @@ class App {
           </div>
           <div style="min-width:130px;">
             <select id="filterCategory" onchange="app.filterInventory()" style="width:100%;padding:10px 12px;border:1px solid var(--border-color);border-radius:var(--radius);background:var(--bg-color);color:var(--text-color);">
-              <option value="">📋 جميع الشركات</option>
+              <option value=""> جميع الشركات</option>
               ${this.inventory.categories.map((c) => `<option value="${c}">${c}</option>`).join("")}
             </select>
           </div>
           <div style="min-width:130px;">
             <select id="filterStatus" onchange="app.filterInventory()" style="width:100%;padding:10px 12px;border:1px solid var(--border-color);border-radius:var(--radius);background:var(--bg-color);color:var(--text-color);">
-              <option value="">📌 جميع الحالات</option>
-              <option value="original">✅ أصلي</option>
-              <option value="commercial">🔄 تجاري</option>
+              <option value=""> جميع الحالات</option>
+              <option value="original"> أصلي</option>
+              <option value="commercial"> تجاري</option>
               <option value="chinese">🇨🇳 صيني</option>
-              <option value="improved">⚡ محسن</option>
-              <option value="used">🔧 مستعمل</option>
-              <option value="new">✨ جديد</option>
+              <option value="improved"> محسن</option>
+              <option value="used"> مستعمل</option>
+              <option value="new"> جديد</option>
             </select>
           </div>
           <div style="min-width:100px;">
             <select id="filterStock" onchange="app.filterInventory()" style="width:100%;padding:10px 12px;border:1px solid var(--border-color);border-radius:var(--radius);background:var(--bg-color);color:var(--text-color);">
-              <option value="">📊 المخزون</option>
+              <option value=""> المخزون</option>
               <option value="all">الكل</option>
-              <option value="low">⚠️ منخفض</option>
-              <option value="out">❌ منتهي</option>
-              <option value="high">✅ متوفر</option>
+              <option value="low"> منخفض</option>
+              <option value="out"> منتهي</option>
+              <option value="high"> متوفر</option>
             </select>
           </div>
           <div style="display:flex;gap:6px;flex-wrap:wrap;">
-            <button class="btn btn-success" onclick="app.exportData()" style="padding:10px 16px;background:#16a34a;color:white;border:none;border-radius:var(--radius);cursor:pointer;display:flex;align-items:center;gap:4px;">📤 تصدير</button>
-            <button class="btn btn-warning" onclick="app.importData()" style="padding:10px 16px;background:#f59e0b;color:white;border:none;border-radius:var(--radius);cursor:pointer;display:flex;align-items:center;gap:4px;">📥 استيراد</button>
-            <button class="btn btn-secondary" onclick="app.clearFilters()" style="padding:10px 16px;background:var(--text-secondary);color:white;border:none;border-radius:var(--radius);cursor:pointer;display:flex;align-items:center;gap:4px;">🧹 مسح الفلتر</button>
+            <button class="btn btn-success" onclick="app.exportData()" style="padding:10px 16px;background:#16a34a;color:white;border:none;border-radius:var(--radius);cursor:pointer;display:flex;align-items:center;gap:4px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> تصدير</button>
+            <button class="btn btn-warning" onclick="app.importData()" style="padding:10px 16px;background:#f59e0b;color:white;border:none;border-radius:var(--radius);cursor:pointer;display:flex;align-items:center;gap:4px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-backup-icon lucide-cloud-backup"><path d="M21 15.251A4.5 4.5 0 0 0 17.5 8h-1.79A7 7 0 1 0 3 13.607"/><path d="M7 11v4h4"/><path d="M8 19a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5 4.82 4.82 0 0 0-3.41 1.41L7 15"/></svg> استيراد</button>
+            <button class="btn btn-secondary" onclick="app.clearFilters()" style="padding:10px 16px;background:var(--text-secondary);color:white;border:none;border-radius:var(--radius);cursor:pointer;display:flex;align-items:center;gap:4px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-broom-sparkles-icon lucide-broom-sparkles"><path d="M11 2v2"/><path d="M12 3h-2"/><path d="M13.5 10.5 22 2"/><path d="M14.734 13.841a2 2 0 00-.314-2.42L12.58 9.58a2 2 0 00-2.421-.314l-7.657 4.461A1 1 0 002.3 15.3l6.403 6.403a1 1 0 001.571-.204z"/><path d="M20 15v4"/><path d="M22 17h-4"/><path d="M4 4v4"/><path d="m5 18 2-2"/><path d="M6 6H2"/><path d="m7.699 10.7 5.602 5.601"/></svg> مسح الفلتر</button>
           </div>
         </div>
 
@@ -583,15 +583,15 @@ class App {
           </div>
           <div style="background:var(--card-bg);padding:12px;border-radius:var(--radius);text-align:center;border-right:4px solid #16a34a;">
             <div style="font-size:1.3rem;font-weight:bold;color:#16a34a;">${products.filter((p) => p.quantity > (p.minStock || 5)).length}</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);">✅ متوفرة</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-check-icon lucide-package-check"><path d="M12 22V12"/><path d="m16 17 2 2 4-4"/><path d="M21 11.127V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.32-.753"/><path d="M3.29 7 12 12l8.71-5"/><path d="m7.5 4.27 8.997 5.148"/></svg> متوفرة</div>
           </div>
           <div style="background:var(--card-bg);padding:12px;border-radius:var(--radius);text-align:center;border-right:4px solid #f59e0b;">
             <div style="font-size:1.3rem;font-weight:bold;color:#f59e0b;">${products.filter((p) => p.quantity <= (p.minStock || 5) && p.quantity > 0).length}</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);">⚠️ منخفضة</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-minus-icon lucide-package-minus"><path d="M12 22V12"/><path d="M16 17h6"/><path d="M21 13V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.675-.955"/><path d="M3.29 7 12 12l8.71-5"/><path d="m7.5 4.27 8.997 5.148"/></svg> منخفضة</div>
           </div>
           <div style="background:var(--card-bg);padding:12px;border-radius:var(--radius);text-align:center;border-right:4px solid #dc2626;">
             <div style="font-size:1.3rem;font-weight:bold;color:#dc2626;">${products.filter((p) => p.quantity === 0).length}</div>
-            <div style="font-size:0.75rem;color:var(--text-secondary);">❌ منتهية</div>
+            <div style="font-size:0.75rem;color:var(--text-secondary);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-x-icon lucide-package-x"><path d="M12 22V12"/><path d="m16.5 14.5 5 5"/><path d="m16.5 19.5 5-5"/><path d="M21 10.5V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.13-.074"/><path d="M3.29 7 12 12l8.71-5"/><path d="m7.5 4.27 8.997 5.148"/></svg> منتهية</div>
           </div>
         </div>
 
@@ -605,7 +605,7 @@ class App {
               <h3 style="color:var(--text-secondary);">لا توجد قطع في المخزون</h3>
               <p style="color:var(--text-secondary);margin-bottom:16px;">ابدأ بإضافة قطعة جديدة</p>
               <button class="btn btn-primary" onclick="app.showAddProduct()" style="padding:12px 24px;background:var(--primary-color);color:white;border:none;border-radius:var(--radius);cursor:pointer;font-size:1rem;">
-                ➕ إضافة قطعة جديدة
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-plus-icon lucide-package-plus"><path d="M12 22V12"/><path d="M16 17h6"/><path d="M19 14v6"/><path d="M21 10.535V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.675-.955"/><path d="M3.29 7 12 12l8.71-5"/><path d="m7.5 4.27 8.997 5.148"/></svg> إضافة قطعة جديدة
               </button>
             </div>
           `
@@ -674,9 +674,9 @@ class App {
           </span>
         </td>
         <td style="padding:12px 16px;border-bottom:1px solid var(--border-color);">
-          <button class="btn btn-info btn-sm" onclick="app.editProduct('${p.id}')" style="margin:2px;padding:4px 12px;background:#3b82f6;color:white;border:none;border-radius:var(--radius);cursor:pointer;">✏️</button>
-          <button class="btn btn-danger btn-sm" onclick="app.deleteProduct('${p.id}')" style="margin:2px;padding:4px 12px;background:#dc2626;color:white;border:none;border-radius:var(--radius);cursor:pointer;">🗑️</button>
-          <button class="btn btn-success btn-sm" onclick="app.duplicateProduct('${p.id}')" style="margin:2px;padding:4px 12px;background:#16a34a;color:white;border:none;border-radius:var(--radius);cursor:pointer;">📋</button>
+          <button class="btn btn-info btn-sm" onclick="app.editProduct('${p.id}')" style="margin:2px;padding:4px 12px;background:#3b82f6;color:white;border:none;border-radius:var(--radius);cursor:pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg></button>
+          <button class="btn btn-danger btn-sm" onclick="app.deleteProduct('${p.id}')" style="margin:2px;padding:4px 12px;background:#dc2626;color:white;border:none;border-radius:var(--radius);cursor:pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></button>
+          <button class="btn btn-success btn-sm" onclick="app.duplicateProduct('${p.id}')" style="margin:2px;padding:4px 12px;background:#16a34a;color:white;border:none;border-radius:var(--radius);cursor:pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-copy-icon lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg></button>
         </td>
       </tr>
     `,
@@ -691,7 +691,7 @@ class App {
     this.editingProductId = null;
     const form = this.createProductForm();
     this.modal.open({
-      title: "➕ إضافة قطعة جديدة",
+      title: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-plus-icon lucide-package-plus"><path d="M12 22V12"/><path d="M16 17h6"/><path d="M19 14v6"/><path d="M21 10.535V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.675-.955"/><path d="M3.29 7 12 12l8.71-5"/><path d="m7.5 4.27 8.997 5.148"/></svg> إضافة قطعة جديدة`,
       content: form,
       size: "lg",
       buttons: [
@@ -718,7 +718,7 @@ class App {
       this.editingProductId = id;
       const form = this.createProductForm(product);
       this.modal.open({
-        title: "✏️ تعديل قطعة",
+        title: `تعديل قطعة<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pencil-icon lucide-pencil"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>`,
         content: form,
         size: "lg",
         buttons: [
@@ -768,19 +768,19 @@ class App {
         <div class="form-group">
           <label style="display:block;margin-bottom:4px;font-weight:500;">الشركة المصنعة</label>
           <select class="form-control" id="productCategory" style="width:100%;padding:10px 12px;border:1px solid var(--border-color);border-radius:var(--radius);background:var(--bg-color);color:var(--text-color);">
-            <option value="">🏢 اختر الشركة</option>
+            <option value=""> اختر الشركة</option>
             ${this.inventory.categories.map((c) => `<option value="${c}" ${p.category === c ? "selected" : ""}>${c}</option>`).join("")}
           </select>
         </div>
         <div class="form-group">
           <label style="display:block;margin-bottom:4px;font-weight:500;">الحالة</label>
           <select class="form-control" id="productStatus" style="width:100%;padding:10px 12px;border:1px solid var(--border-color);border-radius:var(--radius);background:var(--bg-color);color:var(--text-color);">
-            <option value="original" ${p.status === "original" ? "selected" : ""}>✅ أصلي</option>
-            <option value="commercial" ${p.status === "commercial" ? "selected" : ""}>🔄 تجاري</option>
+            <option value="original" ${p.status === "original" ? "selected" : ""}> أصلي</option>
+            <option value="commercial" ${p.status === "commercial" ? "selected" : ""}> تجاري</option>
             <option value="chinese" ${p.status === "chinese" ? "selected" : ""}>🇨🇳 صيني</option>
-            <option value="improved" ${p.status === "improved" ? "selected" : ""}>⚡ محسن</option>
-            <option value="used" ${p.status === "used" ? "selected" : ""}>🔧 مستعمل</option>
-            <option value="new" ${p.status === "new" ? "selected" : ""}>✨ جديد</option>
+            <option value="improved" ${p.status === "improved" ? "selected" : ""}> محسن</option>
+            <option value="used" ${p.status === "used" ? "selected" : ""}> مستعمل</option>
+            <option value="new" ${p.status === "new" ? "selected" : ""}> جديد</option>
           </select>
         </div>
       </div>
@@ -941,7 +941,7 @@ class App {
    */
   deleteProduct(id) {
     this.modal.open({
-      title: "⚠️ تأكيد الحذف",
+      title: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert-icon lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> تأكيد الحذف`,
       content:
         "هل أنت متأكد من حذف هذه القطعة؟ هذا الإجراء لا يمكن التراجع عنه.",
       buttons: [
@@ -1092,7 +1092,7 @@ class App {
    */
   clearAllData() {
     this.modal.open({
-      title: "⚠️ تأكيد مسح البيانات",
+      title: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert-icon lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> تأكيد مسح البيانات`,
       content:
         "هل أنت متأكد من مسح جميع البيانات؟ هذا الإجراء لا يمكن التراجع عنه وسيفقد كل بياناتك.",
       buttons: [
@@ -1137,7 +1137,7 @@ class App {
    */
   resetSampleData() {
     this.modal.open({
-      title: "⚠️ تأكيد إعادة البيانات العينة",
+      title: ` <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert-icon lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>تأكيد إعادة البيانات العينة`,
       content:
         "سيتم حذف جميع البيانات الحالية وإضافة بيانات عينة جديدة. هل أنت متأكد؟",
       buttons: [
@@ -1273,13 +1273,13 @@ class App {
 
       this.pageContent.innerHTML = `
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
-          <h1 style="font-size:1.5rem;">💰 المبيعات والفواتير</h1>
+          <h1 style="font-size:1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign-icon lucide-dollar-sign"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> المبيعات والفواتير</h1>
           <div style="display:flex;gap:10px;flex-wrap:wrap;">
             <button class="btn btn-primary" onclick="app.showNewSale()" style="padding:10px 20px;background:var(--primary-color);color:white;border:none;border-radius:var(--radius);cursor:pointer;">
-              ➕ فاتورة جديدة
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-receipt-text-icon lucide-receipt-text"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg> فاتورة جديدة
             </button>
             <button class="btn btn-info" onclick="app.refreshDataAfterSale()" style="padding:10px 20px;background:#3b82f6;color:white;border:none;border-radius:var(--radius);cursor:pointer;">
-              🔄 تحديث
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw-icon lucide-refresh-cw"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg> تحديث
             </button>
           </div>
         </div>
@@ -1401,7 +1401,7 @@ class App {
           <input class="form-control" id="salePrice" type="number" readonly style="width:100%;padding:10px 12px;border:1px solid var(--border-color);border-radius:var(--radius);background:var(--bg-color);color:var(--text-color);">
         </div>
       </div>
-      <button class="btn btn-primary" onclick="app.addSaleItem()" style="margin-bottom:16px;padding:10px 20px;background:var(--primary-color);color:white;border:none;border-radius:var(--radius);cursor:pointer;">➕ إضافة للفاتورة</button>
+      <button class="btn btn-primary" onclick="app.addSaleItem()" style="margin-bottom:16px;padding:10px 20px;background:var(--primary-color);color:white;border:none;border-radius:var(--radius);cursor:pointer;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-plus-icon lucide-package-plus"><path d="M12 22V12"/><path d="M16 17h6"/><path d="M19 14v6"/><path d="M21 10.535V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.675-.955"/><path d="M3.29 7 12 12l8.71-5"/><path d="m7.5 4.27 8.997 5.148"/></svg> إضافة للفاتورة</button>
       <hr style="margin:16px 0;border-color:var(--border-color);">
       <div id="saleItemsList" style="margin-bottom:16px;"></div>
       <hr style="margin:16px 0;border-color:var(--border-color);">
@@ -1421,7 +1421,7 @@ class App {
     `;
 
     this.modal.open({
-      title: "💰 فاتورة جديدة",
+      title: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-receipt-text-icon lucide-receipt-text"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg> فاتورة جديدة`,
       content: form,
       size: "lg",
       buttons: [
@@ -1664,7 +1664,7 @@ class App {
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
             <h3 style="margin-bottom:0;">رقم الفاتورة: ${invoice.invoiceNumber}</h3>
             <span style="padding:4px 12px;border-radius:20px;font-size:0.85rem;${isCancelled ? "background:#fee2e2;color:#dc2626;" : "background:#dcfce7;color:#16a34a;"}">
-              ${isCancelled ? "⚠️ ملغية" : "✅ مكتملة"}
+              ${isCancelled ? `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert-icon lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> ملغية` : `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big-icon lucide-circle-check-big"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> مكتملة`}
             </span>
           </div>
           <p><strong>التاريخ:</strong> ${formatDate(invoice.createdAt)}</p>
@@ -1740,7 +1740,7 @@ class App {
       `;
 
       this.modal.open({
-        title: `🧾 فاتورة ${invoice.invoiceNumber}`,
+        title: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-receipt-text-icon lucide-receipt-text"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg> فاتورة ${invoice.invoiceNumber}`,
         content: content,
         size: "lg",
         buttons: [{ label: "إغلاق", class: "btn", action: "close" }],
@@ -1755,7 +1755,7 @@ class App {
    */
   cancelInvoice(id) {
     this.modal.open({
-      title: "⚠️ تأكيد الإلغاء",
+      title: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-triangle-alert-icon lucide-triangle-alert"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg> تأكيد الإلغاء`,
       content:
         "هل أنت متأكد من إلغاء هذه الفاتورة؟ سيتم إرجاع الكميات للمخزون وسيتم خصم الأرباح.",
       buttons: [
@@ -1789,14 +1789,14 @@ class App {
       if (!this.pageContent) return;
 
       this.pageContent.innerHTML = `
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
-          <h1 style="font-size:1.5rem;">📈 التقارير</h1>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px;line-height: 40px;">
+          <h1 style="font-size:1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined"><path d="M12 16v5"/><path d="M16 14.639V21"/><path d="M20 10.656V21"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18.463V21"/><path d="M8 14.656V21"/></svg> التقارير</h1>
           <button class="btn btn-primary" onclick="window.print()" style="padding:10px 20px;background:var(--primary-color);color:white;border:none;border-radius:var(--radius);cursor:pointer;">🖨️ طباعة</button>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:20px;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-bottom:20px;line-height: 40px;">
           <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <h3 style="margin-bottom:16px;">📊 ملخص المخزون</h3>
+            <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-pie-icon lucide-chart-pie"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></svg> ملخص المخزون</h3>
             <p><strong>إجمالي الأصناف:</strong> ${stats.totalItems}</p>
             <p><strong>إجمالي الكميات:</strong> ${stats.totalQuantity}</p>
             <p><strong>قيمة المخزون:</strong> ${formatCurrency(stats.totalValue)}</p>
@@ -1805,7 +1805,7 @@ class App {
           </div>
 
           <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <h3 style="margin-bottom:16px;">💰 ملخص المبيعات</h3>
+            <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign-icon lucide-dollar-sign"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> ملخص المبيعات</h3>
             <p><strong>مبيعات اليوم:</strong> ${salesStats.today.sales}</p>
             <p><strong>إيرادات اليوم:</strong> ${formatCurrency(salesStats.today.revenue)}</p>
             <p><strong>مبيعات الأسبوع:</strong> ${salesStats.week.sales}</p>
@@ -1818,7 +1818,7 @@ class App {
         </div>
 
         <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);margin-bottom:20px;">
-          <h3 style="margin-bottom:16px;">🏆 أفضل 10 قطع مبيعاً</h3>
+          <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trophy-icon lucide-trophy"><path d="M10 14.66V17a1 1 0 0 1-1 1 2 2 0 0 0-2 2v2"/><path d="M14 14.66V17a1 1 0 0 0 1 1 2 2 0 0 1 2 2v2"/><path d="M17.916 10H19.5A2.5 2.5 0 0 0 22 7.5V5a1 1 0 0 0-1-1h-3"/><path d="M4 22h16"/><path d="M6 9a6 6 0 0 0 12 0V3a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1z"/><path d="M6.084 10H4.5A2.5 2.5 0 0 1 2 7.5V5a1 1 0 0 1 1-1h3"/></svg> أفضل 10 قطع مبيعاً</h3>
           ${
             topProducts.length > 0
               ? `
@@ -1854,7 +1854,7 @@ class App {
         </div>
 
         <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-          <h3 style="margin-bottom:16px;">⚠️ قطع منخفضة المخزون</h3>
+          <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-minus-icon lucide-package-minus"><path d="M12 22V12"/><path d="M16 17h6"/><path d="M21 13V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l1.675-.955"/><path d="M3.29 7 12 12l8.71-5"/><path d="m7.5 4.27 8.997 5.148"/></svg> قطع منخفضة المخزون</h3>
           ${
             lowStock.length > 0
               ? `
@@ -1885,7 +1885,7 @@ class App {
               </table>
             </div>
           `
-              : '<p style="text-align:center;color:var(--text-secondary);">✅ جميع القطع متوفرة</p>'
+              : '<p style="text-align:center;color:var(--text-secondary);"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big-icon lucide-circle-check-big"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg> جميع القطع متوفرة</p>'
           }
         </div>
       `;
@@ -1910,64 +1910,65 @@ class App {
 
       this.pageContent.innerHTML = `
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
-          <h1 style="font-size:1.5rem;">📊 التحليلات والإحصائيات</h1>
+          <h1 style="font-size:1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-pie-icon lucide-chart-pie"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></svg> التحليلات والإحصائيات</h1>
         </div>
 
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-bottom:20px;">
           <div style="background:var(--card-bg);padding:20px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <div style="font-size:2rem;margin-bottom:10px;">📦</div>
+            <div style="font-size:2rem;margin-bottom:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-boxes-icon lucide-boxes"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"/><path d="m7 16.5-4.74-2.85"/><path d="m7 16.5 5-3"/><path d="M7 16.5v5.17"/><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"/><path d="m17 16.5-5-3"/><path d="m17 16.5 4.74-2.85"/><path d="M17 16.5v5.17"/><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"/><path d="M12 8 7.26 5.15"/><path d="m12 8 4.74-2.85"/><path d="M12 13.5V8"/></svg></div>
             <div style="font-size:1.8rem;font-weight:bold;">${stats.totalItems}</div>
             <div style="color:var(--text-secondary);">إجمالي الأصناف</div>
           </div>
           <div style="background:var(--card-bg);padding:20px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <div style="font-size:2rem;margin-bottom:10px;">📊</div>
+            <div style="font-size:2rem;margin-bottom:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-column-icon lucide-chart-no-axes-column"><path d="M5 21v-6"/><path d="M12 21V3"/><path d="M19 21V9"/></svg></div>
             <div style="font-size:1.8rem;font-weight:bold;">${stats.totalQuantity}</div>
             <div style="color:var(--text-secondary);">إجمالي الكميات</div>
           </div>
           <div style="background:var(--card-bg);padding:20px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <div style="font-size:2rem;margin-bottom:10px;">💰</div>
+            <div style="font-size:2rem;margin-bottom:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-dollar-sign-icon lucide-dollar-sign"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
             <div style="font-size:1.8rem;font-weight:bold;">${formatCurrency(stats.totalValue)}</div>
             <div style="color:var(--text-secondary);">قيمة المخزون</div>
           </div>
           <div style="background:var(--card-bg);padding:20px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <div style="font-size:2rem;margin-bottom:10px;">📈</div>
+            <div style="font-size:2rem;margin-bottom:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined"><path d="M12 16v5"/><path d="M16 14.639V21"/><path d="M20 10.656V21"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18.463V21"/><path d="M8 14.656V21"/></svg></div>
             <div style="font-size:1.8rem;font-weight:bold;">${formatCurrency(salesStats.total.revenue)}</div>
             <div style="color:var(--text-secondary);">إجمالي الإيرادات</div>
           </div>
         </div>
 
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;shadow);
+  line-height: 21px; ">
           <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <h3 style="margin-bottom:16px;">📅 إحصائيات اليوم</h3>
+            <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check2-icon lucide-calendar-check-2"><path d="M 19 3 L 5 3"/><path d="M 21 13 L 21 5"/><path d="M 21 5 A2 2 0 0 0 19 3"/><path d="M 3 19 A2 2 0 0 0 5 21"/><path d="M 3 5 L 3 19"/><path d="M 5 3 A2 2 0 0 0 3 5"/><path d="m16 19 2 2 4-4"/><path d="M16 2v3"/><path d="M3 9h18"/><path d="M5 21 L12.5 21"/><path d="M8 2v3"/></svg> إحصائيات اليوم</h3>
             <p><strong>المبيعات:</strong> ${salesStats.today.sales}</p>
             <p><strong>الإيرادات:</strong> ${formatCurrency(salesStats.today.revenue)}</p>
             <p><strong>الأرباح:</strong> ${formatCurrency(salesStats.today.profit)}</p>
           </div>
 
-          <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <h3 style="margin-bottom:16px;">📅 إحصائيات الأسبوع</h3>
+          <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);line-height: 21px;">
+            <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check2-icon lucide-calendar-check-2"><path d="M 19 3 L 5 3"/><path d="M 21 13 L 21 5"/><path d="M 21 5 A2 2 0 0 0 19 3"/><path d="M 3 19 A2 2 0 0 0 5 21"/><path d="M 3 5 L 3 19"/><path d="M 5 3 A2 2 0 0 0 3 5"/><path d="m16 19 2 2 4-4"/><path d="M16 2v3"/><path d="M3 9h18"/><path d="M5 21 L12.5 21"/><path d="M8 2v3"/></svg> إحصائيات الأسبوع</h3>
             <p><strong>المبيعات:</strong> ${salesStats.week.sales}</p>
             <p><strong>الإيرادات:</strong> ${formatCurrency(salesStats.week.revenue)}</p>
             <p><strong>الأرباح:</strong> ${formatCurrency(salesStats.week.profit)}</p>
           </div>
 
-          <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <h3 style="margin-bottom:16px;">📅 إحصائيات الشهر</h3>
+          <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);line-height: 21px;">
+            <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check2-icon lucide-calendar-check-2"><path d="M 19 3 L 5 3"/><path d="M 21 13 L 21 5"/><path d="M 21 5 A2 2 0 0 0 19 3"/><path d="M 3 19 A2 2 0 0 0 5 21"/><path d="M 3 5 L 3 19"/><path d="M 5 3 A2 2 0 0 0 3 5"/><path d="m16 19 2 2 4-4"/><path d="M16 2v3"/><path d="M3 9h18"/><path d="M5 21 L12.5 21"/><path d="M8 2v3"/></svg> إحصائيات الشهر</h3>
             <p><strong>المبيعات:</strong> ${salesStats.month.sales}</p>
             <p><strong>الإيرادات:</strong> ${formatCurrency(salesStats.month.revenue)}</p>
             <p><strong>الأرباح:</strong> ${formatCurrency(salesStats.month.profit)}</p>
           </div>
 
-          <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-            <h3 style="margin-bottom:16px;">📅 إحصائيات السنة</h3>
+          <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);line-height: 21px;">
+            <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar-check2-icon lucide-calendar-check-2"><path d="M 19 3 L 5 3"/><path d="M 21 13 L 21 5"/><path d="M 21 5 A2 2 0 0 0 19 3"/><path d="M 3 19 A2 2 0 0 0 5 21"/><path d="M 3 5 L 3 19"/><path d="M 5 3 A2 2 0 0 0 3 5"/><path d="m16 19 2 2 4-4"/><path d="M16 2v3"/><path d="M3 9h18"/><path d="M5 21 L12.5 21"/><path d="M8 2v3"/></svg> إحصائيات السنة</h3>
             <p><strong>المبيعات:</strong> ${salesStats.year.sales}</p>
             <p><strong>الإيرادات:</strong> ${formatCurrency(salesStats.year.revenue)}</p>
             <p><strong>الأرباح:</strong> ${formatCurrency(salesStats.year.profit)}</p>
           </div>
         </div>
 
-        <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);margin-top:20px;">
-          <h3 style="margin-bottom:16px;">🏷️ توزيع القطع حسب الشركة</h3>
+        <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);margin-top:20px;line-height: 21px;">
+          <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-pie-icon lucide-chart-pie"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></svg> توزيع القطع حسب الشركة</h3>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;">
  ${this.inventory.categories
    .map((cat) => {
@@ -2008,36 +2009,36 @@ class App {
 
       this.pageContent.innerHTML = `
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:10px;">
-          <h1 style="font-size:1.5rem;">⚙️ إعدادات النظام</h1>
+          <h1 style="font-size:1.5rem;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-settings-icon lucide-settings"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"/><circle cx="12" cy="12" r="3"/></svg> إعدادات النظام</h1>
         </div>
 
         <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);margin-bottom:20px;">
-          <h3 style="margin-bottom:16px;">🌓 المظهر</h3>
+          <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eclipse"><circle cx="12" cy="12" r="10"/><path d="M12 2a7 7 0 1 0 10 10"/></svg> المظهر</h3>
           <button class="btn btn-primary" onclick="app.toggleDarkMode()" style="padding:10px 20px;background:var(--primary-color);color:white;border:none;border-radius:var(--radius);cursor:pointer;">
-            ${isDark ? "☀️ الوضع الفاتح" : "🌙 الوضع المظلم"}
+            ${isDark ? `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun-moon"><path d="M12 2v2"/><path d="M14.837 16.385a6 6 0 1 1-7.223-7.222c.624-.147.97.66.715 1.248a4 4 0 0 0 5.26 5.259c.589-.255 1.396.09 1.248.715"/><path d="M16 12a4 4 0 0 0-4-4"/><path d="m19 5-1.256 1.256"/><path d="M20 12h2"/></svg> الوضع الفاتح` : `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon-star-icon lucide-moon-star"><path d="M18 5h4"/><path d="M20 3v4"/><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg> الوضع المظلم`}
           </button>
         </div>
 
         <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);margin-bottom:20px;">
-          <h3 style="margin-bottom:16px;">📊 البيانات</h3>
+          <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-pie-icon lucide-chart-pie"><path d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z"/><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/></svg> البيانات</h3>
           <div style="display:flex;flex-wrap:wrap;gap:10px;">
             <button class="btn btn-success" onclick="app.exportData()" style="padding:10px 20px;background:#16a34a;color:white;border:none;border-radius:var(--radius);cursor:pointer;">
-              📤 تصدير جميع البيانات
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-download-icon lucide-download"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> تصدير جميع البيانات
             </button>
             <button class="btn btn-info" onclick="app.importData()" style="padding:10px 20px;background:#3b82f6;color:white;border:none;border-radius:var(--radius);cursor:pointer;">
-              📥 استيراد بيانات
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud-backup-icon lucide-cloud-backup"><path d="M21 15.251A4.5 4.5 0 0 0 17.5 8h-1.79A7 7 0 1 0 3 13.607"/><path d="M7 11v4h4"/><path d="M8 19a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5 4.82 4.82 0 0 0-3.41 1.41L7 15"/></svg> استيراد بيانات
             </button>
             <button class="btn btn-danger" onclick="app.clearAllData()" style="padding:10px 20px;background:#dc2626;color:white;border:none;border-radius:var(--radius);cursor:pointer;">
-              🗑️ مسح جميع البيانات
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg> مسح جميع البيانات
             </button>
             <button class="btn btn-warning" onclick="app.resetSampleData()" style="padding:10px 20px;background:#f59e0b;color:white;border:none;border-radius:var(--radius);cursor:pointer;">
-              🔄 إعادة تحميل البيانات العينة
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-refresh-cw-icon lucide-refresh-cw"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg> إعادة تحميل البيانات العينة
             </button>
           </div>
         </div>
 
         <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);margin-bottom:20px;">
-          <h3 style="margin-bottom:16px;">📈 إحصائيات النظام</h3>
+          <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined"><path d="M12 16v5"/><path d="M16 14.639V21"/><path d="M20 10.656V21"/><path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15"/><path d="M4 18.463V21"/><path d="M8 14.656V21"/></svg> إحصائيات النظام</h3>
           <p><strong>عدد القطع:</strong> ${this.inventory.getAll().length}</p>
           <p><strong>عدد الفواتير:</strong> ${this.sales.getAllInvoices().length}</p>
           <p><strong>حجم التخزين:</strong> ${(this.storage.getSize() / 1024).toFixed(2)} KB</p>
@@ -2045,7 +2046,7 @@ class App {
         </div>
 
         <div style="background:var(--card-bg);padding:24px;border-radius:var(--radius-lg);box-shadow:var(--shadow);">
-          <h3 style="margin-bottom:16px;">⌨️ اختصارات لوحة المفاتيح</h3>
+          <h3 style="margin-bottom:16px;"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-keyboard"><path d="M10 8h.01"/><path d="M12 12h.01"/><path d="M14 8h.01"/><path d="M16 12h.01"/><path d="M18 8h.01"/><path d="M6 8h.01"/><path d="M7 16h10"/><path d="M8 12h.01"/><rect width="20" height="16" x="2" y="4" rx="2"/></svg> اختصارات لوحة المفاتيح</h3>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
             <div><kbd style="background:var(--bg-color);padding:4px 8px;border-radius:4px;border:1px solid var(--border-color);">Ctrl+F</kbd> بحث سريع</div>
             <div><kbd style="background:var(--bg-color);padding:4px 8px;border-radius:4px;border:1px solid var(--border-color);">Esc</kbd> إغلاق المودال</div>

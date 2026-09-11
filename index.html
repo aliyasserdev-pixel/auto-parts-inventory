@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,35 +9,102 @@
     <link rel="stylesheet" href="css/dark-mode.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
     <!-- Sidebar -->
     <aside class="sidebar" id="sidebar">
         <div class="logo-container">
-            <h2>🚗 قطع غيار بارق</h2>
+            <h2><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-car-front-icon lucide-car-front">
+                    <path d="m21 8-2 2-1.5-3.7A2 2 0 0 0 15.646 5H8.4a2 2 0 0 0-1.903 1.257L5 10 3 8" />
+                    <path d="M7 14h.01" />
+                    <path d="M17 14h.01" />
+                    <rect width="18" height="8" x="3" y="10" rx="2" />
+                    <path d="M5 18v2" />
+                    <path d="M19 18v2" />
+                </svg> قطع غيار </h2>
             <button class="toggle-sidebar" onclick="toggleSidebar()">☰</button>
         </div>
         <nav class="sidebar-nav">
             <a href="#" class="active" data-page="dashboard">
-                <span>📊</span> لوحة التحكم
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chart-no-axes-column-icon lucide-chart-no-axes-column">
+                    <path d="M5 21v-6" />
+                    <path d="M12 21V3" />
+                    <path d="M19 21V9" />
+                </svg>لوحة التحكم
             </a>
             <a href="#" data-page="inventory">
-                <span>📦</span> المخزون
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-boxes-icon lucide-boxes">
+                    <path
+                        d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z" />
+                    <path d="m7 16.5-4.74-2.85" />
+                    <path d="m7 16.5 5-3" />
+                    <path d="M7 16.5v5.17" />
+                    <path
+                        d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z" />
+                    <path d="m17 16.5-5-3" />
+                    <path d="m17 16.5 4.74-2.85" />
+                    <path d="M17 16.5v5.17" />
+                    <path
+                        d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z" />
+                    <path d="M12 8 7.26 5.15" />
+                    <path d="m12 8 4.74-2.85" />
+                    <path d="M12 13.5V8" />
+                </svg> المخزون
             </a>
             <a href="#" data-page="sales">
-                <span>💰</span> المبيعات
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-dollar-sign-icon lucide-dollar-sign">
+                    <line x1="12" x2="12" y1="2" y2="22" />
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg> المبيعات
             </a>
             <a href="#" data-page="reports">
-                <span>📈</span> التقارير
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chart-no-axes-combined-icon lucide-chart-no-axes-combined">
+                    <path d="M12 16v5" />
+                    <path d="M16 14.639V21" />
+                    <path d="M20 10.656V21" />
+                    <path d="m22 3-8.646 8.646a.5.5 0 0 1-.708 0L9.354 8.354a.5.5 0 0 0-.707 0L2 15" />
+                    <path d="M4 18.463V21" />
+                    <path d="M8 14.656V21" />
+                </svg> التقارير
             </a>
             <a href="#" data-page="analytics">
-                <span>📊</span> التحليلات
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-chart-pie-icon lucide-chart-pie">
+                    <path
+                        d="M21 12c.552 0 1.005-.449.95-.998a10 10 0 0 0-8.953-8.951c-.55-.055-.998.398-.998.95v8a1 1 0 0 0 1 1z" />
+                    <path d="M21.21 15.89A10 10 0 1 1 8 2.83" />
+                </svg> التحليلات
             </a>
             <a href="#" data-page="settings">
-                <span>⚙️</span> الإعدادات
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-settings-icon lucide-settings">
+                    <path
+                        d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915" />
+                    <circle cx="12" cy="12" r="3" />
+                </svg> الإعدادات
             </a>
         </nav>
         <div class="sidebar-footer">
-            <button onclick="toggleDarkMode()">🌙</button>
+            <button onclick="toggleDarkMode()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="lucide lucide-moon-star-icon lucide-moon-star">
+                    <path d="M18 5h4" />
+                    <path d="M20 3v4" />
+                    <path
+                        d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401" />
+                </svg></button>
         </div>
     </aside>
 
@@ -46,12 +114,31 @@
         <header class="main-header">
             <div class="header-search">
                 <input type="text" id="globalSearch" placeholder="بحث سريع...">
-                <button onclick="performSearch()">🔍</button>
+                <button onclick="performSearch()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-search-icon lucide-search">
+                        <path d="m21 21-4.34-4.34" />
+                        <circle cx="11" cy="11" r="8" />
+                    </svg></button>
             </div>
             <div class="header-actions">
                 <span id="currentDate"></span>
-                <button onclick="showNotifications()">🔔</button>
-                <button onclick="toggleSidebar()">☰</button>
+                <button onclick="showNotifications()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-bell-ring-icon lucide-bell-ring">
+                        <path d="M10.268 21a2 2 0 0 0 3.464 0" />
+                        <path d="M22 8c0-2.3-.8-4.3-2-6" />
+                        <path
+                            d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326" />
+                        <path d="M4 2C2.8 3.7 2 5.7 2 8" />
+                    </svg></button>
+                <button onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-text-align-justify-icon lucide-text-align-justify">
+                        <path d="M3 5h18" />
+                        <path d="M3 12h18" />
+                        <path d="M3 19h18" />
+                    </svg></button>
             </div>
         </header>
 
@@ -70,4 +157,5 @@
     <!-- Scripts -->
     <script type="module" src="js/app.js"></script>
 </body>
+
 </html>

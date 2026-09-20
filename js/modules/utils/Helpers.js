@@ -25,7 +25,7 @@ export const formatDate = (date, format = 'ar') => {
 /**
  * تنسيق العملة
  */
-export const formatCurrency = (amount, currency = 'SAR') => {
+export const formatCurrency = (amount, currency = 'SDG') => {
     return new Intl.NumberFormat('ar-EG', {
         style: 'currency',
         currency: currency
